@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>loginpage</title>
+        <script>
+            //user validations
+            function loginvalidation(){
+                //sravs
+                var uname=document.myform.username.value;
+                var password=document.myform.password.value;
+                if(uname==null||uname=""){
+                    alert("name cant be blank")
+                    return false;
+                } 
+                else if(password.length<6){
+                    alert("password must be  6 letters")
+                    return false;
+                }
+                return true;
+            }
+
+        </script>
+    </head>
+    <body>
+        <h2>login page</h2>
+        <form name="myform"action="loginsuccess.html" onsubmit="return loginvalidation(this)">
+            User Name:<input type="text" name="username"><br>
+            password:<input type="password"name="password"><br>
+            <input type="submit"value="submit">
+        </form>
+    </body>
+</html>

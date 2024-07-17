@@ -1,0 +1,40 @@
+<html>
+   <head>
+      <title>checkBoxValidation</title>
+   </head>
+   <style>
+    body{
+        background-color: pink;
+    }
+    h1{
+        text-shadow: 5px 5px 10px grey;
+    }
+   </style>
+   <body>
+        <h1>checked box validation</h1>
+        <form action="loginsuccess.html"id="checkedButtons" onsubmit="return validateForm()">
+            <input type="checkbox" name="coding" value="coding">coding<br>
+            <input type="checkbox" name="decoding" value="deconding">decoding<br>
+            <input type="checkbox" name="gaming" value="gaming">gaming<br>
+            <input type="submit" value="Submit">
+        </form>        
+    <script>
+         function validateForm(){
+            const checkedbuttons=document.getElementsByName('checkbox');
+            let checkedButton=false;
+            for(let i=0;i<checkedButtons.length;i++){
+                if(checkedButtons[i].checked){
+                    checkedButton=true;
+                    checkedboxes++;
+                    break;
+                }
+            }
+            if(!checkedButton){
+                alert("please select a checkbox");
+                return false;
+            }
+            return true;
+         }
+         </script>
+    </body>
+</html>
